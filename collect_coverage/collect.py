@@ -52,18 +52,55 @@ for gz_file in gz_files:
     execute("gunzip %s" % gz_file)
 os.chdir("..")
 
+class Fcov(object):
+    def __init__(self, name):
+        self.file_name = name
+        self.line_num_exe = 0
+        self.line_num_unexe = 0
+        self.func_set_exe = set()
+        self.func_set_unexe = set()
+
+    def add_line_exe(self):
+        self.line_num_exe = self.line_num_exe + 1
+
+    def add_line_unexe(self):
+        self.line_num_unexe = self.line_num_unexe + 1
+
+    def add_func_exe(self, func_name):
+        self.func_set_exe.add(func_name)
+
+    def add_func_unexe(self, func_name):
+        self.func_set_unexe.add(func_name)
+
 # collect coverage info
 json_files = find_files(gcov_result_path, "json")
-line_number = 0
+source_files = {}
 for json_file in json_files:
     with open(json_file, "r") as f:
         data = json.load(f)
+    # iterate each file
     for data_for_file in data["files"]:
+        source_file_name = data_for_file["file"]
+        fcov = Fcov(source_file_name)
+        source_files[source_file_name] = fcov
+        # iterate each line
         for data_for_line in data_for_file["lines"]:
             if (data_for_line["count"] > 0):
-                line_number = line_number + 1
-
-print(line_number)
+                fcov.add_line_exe()
+            else:
+                fcov.add_line_unexe()
+        # iterate each func
+        for data_for_func in data_for_file["functions"]:
+            func_name = data_for_func["demangled_name"]
+            if (data_for_func["blocks_executed"] > 0):
+                fcov.add_func_exe(func_name)
+            else:
+                fcov.add_func_unexe(func_name)
+        print("current file:", source_file_name)
+        print("line_exe:", fcov.line_num_exe)
+        print("line_unexe:", fcov.line_num_unexe)
+        print("func_exe:", fcov.func_set_exe)
+        print("func_unexe:", fcov.func_set_unexe)
 
 
 
