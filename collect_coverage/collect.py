@@ -23,9 +23,9 @@ gcc_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/bin/gcc"
 gcc_flags = "-I /usr/local/include/csmith/"
 gcov_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/bin/gcov"
 gcov_flags = "-i"
-benchmark_path = "../benchmark/"
-gcda_result_path = "../gcc/"
-gcov_result_path = "./gcov_result/"
+benchmark_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/benchmark/"
+gcda_result_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/"
+gcov_result_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/"
 
 
 # cleanup gcda
@@ -39,16 +39,17 @@ for test_case in benchmark:
     execute(cmd)
 
 # cleanup gcov
-cleanup(gcov_result_path, "gcov")
+cleanup(gcov_result_path, "gz")
+cleanup(gcov_result_path, "json")
 
 # generate gcov files
 gcda_files = find_files(gcda_result_path, "gcda")
 os.chdir(gcov_result_path)
 for gcda_file in gcda_files:
     execute("%s %s %s" % (gcov_path, gcov_flags, gcda_file))
-gz_files = find_files(".", "gz")
+gz_files = find_files(gcov_result_path, "gz")
 for gz_file in gz_files:
-    execute("gz %s" % gz_file)
+    execute("gunzip %s" % gz_file)
 os.chdir("..")
 
 # collect coverage info
