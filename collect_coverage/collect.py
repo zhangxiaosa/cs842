@@ -33,6 +33,7 @@ cleanup(gcda_result_path, "gcda")
 
 # run benchmark
 benchmark = find_files(benchmark_path, 'c')
+benchmark.sort()
 for test_case in benchmark:
     print("starting: ", test_case)
     cmd = "%s %s %s %s" % (gcc_path, opt_level, gcc_flags, test_case)
@@ -44,10 +45,12 @@ cleanup(gcov_result_path, "json")
 
 # generate gcov files
 gcda_files = find_files(gcda_result_path, "gcda")
+gcda_files.sort()
 os.chdir(gcov_result_path)
 for gcda_file in gcda_files:
     execute("%s %s %s" % (gcov_path, gcov_flags, gcda_file))
 gz_files = find_files(gcov_result_path, "gz")
+gz_files.sort()
 for gz_file in gz_files:
     execute("gunzip %s" % gz_file)
 os.chdir("..")
@@ -74,6 +77,7 @@ class Fcov(object):
 
 # collect coverage info
 json_files = find_files(gcov_result_path, "json")
+json_files.sort()
 source_files = {}
 for json_file in json_files:
     with open(json_file, "r") as f:
@@ -96,12 +100,21 @@ for json_file in json_files:
                 fcov.add_func_exe(func_name)
             else:
                 fcov.add_func_unexe(func_name)
-        print("current file:", source_file_name)
-        print("line_exe:", fcov.line_num_exe)
-        print("line_unexe:", fcov.line_num_unexe)
-        print("func_exe:", fcov.func_set_exe)
-        print("func_unexe:", fcov.func_set_unexe)
+        #print("current file:", source_file_name)
+        #print("line_exe:", fcov.line_num_exe)
+        #print("line_unexe:", fcov.line_num_unexe)
+        #print("func_exe:", fcov.func_set_exe)
+        #print("func_unexe:", fcov.func_set_unexe)
 
+# summary coverage info
+func_num = 0
+line_num = 0
+for file_name, data in source_files.items():
+    func_num = func_num + len(data.func_set_exe)
+    line_num = line_num + data.line_num_exe
+
+print("func num:", func_num)
+print("line num:", line_num)
 
 
 
