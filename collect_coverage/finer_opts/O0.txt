@@ -1,81 +1,81 @@
-  -faggressive-loop-optimizations 	
-  -falign-functions          		
-  -falign-jumps              		
-  -falign-labels             		
-  -falign-loops              		
-  -fallocation-dce            		
-  -fassume-phsa               	
-  -fasynchronous-unwind-tables 		
-  -fauto-inc-dec              		
-  -fdce                       		
-  -fdelete-null-pointer-checks 		
-  -fearly-inlining            		
-  -fexcess-precision=fast
-  -ffast-math                 		
-  -ffp-contract=fast
-  -ffp-int-builtin-inexact    		
-  -ffunction-cse              		
-  -fgcse-lm                   		
-  -fhandle-exceptions
-  -finline-atomics            		
-  -fipa-stack-alignment       		
-  -fira-algorithm=CB
-  -fira-hoist-pressure        		
-  -fira-region=one
-  -fira-share-save-slots      		
-  -fira-share-spill-slots     		
-  -fivopts                    		
-  -fjump-tables               		
-  -flifetime-dse              		
-  -flifetime-dse=2
-  -flive-patching             		
-  -fmath-errno                		
-  -fnothrow-opt               		
-  -fpack-struct      		
-  -fpatchable-function-entry 		
-  -fpeephole                  		
-  -fplt                       		
-  -fprefetch-loop-arrays      		
-  -fprintf-return-value       		
-  -frename-registers          		
-  -freorder-blocks-algorithm=simple
-  -frtti                      		
-  -fsched-critical-path-heuristic 	
-  -fsched-dep-count-heuristic 		
-  -fsched-group-heuristic     		
-  -fsched-interblock          		
-  -fsched-last-insn-heuristic 		
-  -fsched-rank-heuristic      		
-  -fsched-spec                		
-  -fsched-spec-insn-heuristic 		
-  -fsched-stalled-insns-dep   		 	
-  -fsched-stalled-insns 	
-  -fschedule-fusion           		
-  -fshort-enums               		
-  -fshrink-wrap-separate      		
-  -fsigned-zeros              		
-  -fsimd-cost-model=unlimited
-  -fsplit-ivs-in-unroller     		
-  -fssa-backprop              		
-  -fstack-check 	
-  -fstack-reuse=all
-  -fstdarg-opt                		
-  -fstrict-enums              		
-  -fstrict-volatile-bitfields 		
-  -fno-threadsafe-statics     		
-  -ftrapping-math             		
-  -ftree-cselim               		
-  -ftree-forwprop             		
-  -ftree-loop-if-convert      		
-  -ftree-loop-im              		
-  -ftree-loop-ivcanon         		
-  -ftree-loop-optimize        		
-  -ftree-parallelize-loops=1
-  -ftree-phiprop              		
-  -ftree-reassoc              		
-  -ftree-scev-cprop           		
-  -ftree-vectorize            		
-  -fvar-tracking              		
-  -fvar-tracking-assignments  		
-  -fvect-cost-model=unlimited
-  -fweb                       		
+-faggressive-loop-optimizations
+-falign-functions
+-falign-jumps
+-falign-labels
+-falign-loops
+-fallocation-dce
+-fassume-phsa
+-fasynchronous-unwind-tables
+-fauto-inc-dec
+-fdce
+-fdelete-null-pointer-checks
+-fearly-inlining
+-fexcess-precision=fast
+-ffast-math
+-ffp-contract=fast
+-ffp-int-builtin-inexact
+-ffunction-cse
+-fgcse-lm
+-fhandle-exceptions
+-finline-atomics
+-fipa-stack-alignment
+-fira-algorithm=CB
+-fira-hoist-pressure
+-fira-region=one
+-fira-share-save-slots
+-fira-share-spill-slots
+-fivopts
+-fjump-tables
+-flifetime-dse
+-flifetime-dse=2
+-flive-patching
+-fmath-errno
+-fnothrow-opt
+-fpack-struct
+-fpatchable-function-entry
+-fpeephole
+-fplt
+-fprefetch-loop-arrays
+-fprintf-return-value
+-frename-registers
+-freorder-blocks-algorithm=simple
+-frtti
+-fsched-critical-path-heuristic
+-fsched-dep-count-heuristic
+-fsched-group-heuristic
+-fsched-interblock
+-fsched-last-insn-heuristic
+-fsched-rank-heuristic
+-fsched-spec
+-fsched-spec-insn-heuristic
+-fsched-stalled-insns-dep
+-fsched-stalled-insns
+-fschedule-fusion
+-fshort-enums
+-fshrink-wrap-separate
+-fsigned-zeros
+-fsimd-cost-model=unlimited
+-fsplit-ivs-in-unroller
+-fssa-backprop
+-fstack-check
+-fstack-reuse=all
+-fstdarg-opt
+-fstrict-enums
+-fstrict-volatile-bitfields
+-fno-threadsafe-statics
+-ftrapping-math
+-ftree-cselim
+-ftree-forwprop
+-ftree-loop-if-convert
+-ftree-loop-im
+-ftree-loop-ivcanon
+-ftree-loop-optimize
+-ftree-parallelize-loops=1
+-ftree-phiprop
+-ftree-reassoc
+-ftree-scev-cprop
+-ftree-vectorize
+-fvar-tracking
+-fvar-tracking-assignments
+-fvect-cost-model=unlimited
+-fweb
