@@ -120,23 +120,31 @@ def collect_coverage_of_options(opt_level):
     func_num_unexe = 0
     line_num_exe = 0
     line_num_unexe = 0
+    file_num_exe = 0
+    file_num_unexe = 0
 
     for file_name, data in source_files.items():
         func_num_exe = func_num_exe + len(data.func_set_exe)
         func_num_unexe = func_num_unexe + len(data.func_set_unexe)
         line_num_exe = line_num_exe + len(data.line_set_exe)
         line_num_unexe = line_num_unexe + len(data.line_set_unexe)
+
+        # file level
+        if (len(data.line_set_exe) >  0):
+            file_num_exe = file_num_exe + 1
+        else:
+            file_num_unexe = file_num_unexe + 1
     
     #print("func num:", func_num)
     #print("line num:", line_num)
 
-    return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe
+    return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe
 
 
 opt_level_list = ["-O0", "-O1", "-O2", "-Os", "-O3"]
 
 for opt_level in opt_level_list:
-    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe = collect_coverage_of_options(opt_level) 
-    print("opt_level: %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d" % (opt_level, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe))
+    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe = collect_coverage_of_options(opt_level) 
+    print("opt_level: %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d" % (opt_level, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe))
 
 
