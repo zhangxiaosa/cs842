@@ -12,7 +12,6 @@ def cleanup(path, extension):
     print("starting: cleanup %s in %s" % (extension, path))
     for f in glob.glob(path + '/**/*.%s' % extension, recursive=True):
         execute("rm %s" % f)
-        print("removed %s" % f)
 
 def find_files(path, extension):
     return glob.glob(path + '/**/*.%s' % extension, recursive=True)
@@ -32,10 +31,11 @@ gcov_result_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_cov
 cleanup(gcda_result_path, "gcda")
 
 # run benchmark
+print("starting running benchmark")
 benchmark = find_files(benchmark_path, 'c')
 benchmark.sort()
 for test_case in benchmark:
-    print("starting: ", test_case)
+    #print("starting: ", test_case)
     cmd = "%s %s %s %s" % (gcc_path, opt_level, gcc_flags, test_case)
     execute(cmd)
 
@@ -58,16 +58,16 @@ os.chdir("..")
 class Fcov(object):
     def __init__(self, name):
         self.file_name = name
-        self.line_num_exe = 0
-        self.line_num_unexe = 0
+        self.line_set_exe = set()
+        self.line_set_unexe = set()
         self.func_set_exe = set()
         self.func_set_unexe = set()
 
-    def add_line_exe(self):
-        self.line_num_exe = self.line_num_exe + 1
+    def add_line_exe(self, line_no):
+        self.line_set_exe.add(line_no)
 
-    def add_line_unexe(self):
-        self.line_num_unexe = self.line_num_unexe + 1
+    def add_line_unexe(self, line_no):
+        self.line_set_unexe.add(line_no)
 
     def add_func_exe(self, func_name):
         self.func_set_exe.add(func_name)
@@ -76,10 +76,12 @@ class Fcov(object):
         self.func_set_unexe.add(func_name)
 
 # collect coverage info
+print("starting coverage info collection")
 json_files = find_files(gcov_result_path, "json")
 json_files.sort()
 source_files = {}
 for json_file in json_files:
+    #print("current gcda file:", json_file)
     with open(json_file, "r") as f:
         data = json.load(f)
     # iterate each file
@@ -89,10 +91,11 @@ for json_file in json_files:
         source_files[source_file_name] = fcov
         # iterate each line
         for data_for_line in data_for_file["lines"]:
+            func_name = data_for_line["line_number"]
             if (data_for_line["count"] > 0):
-                fcov.add_line_exe()
+                fcov.add_line_exe(func_name)
             else:
-                fcov.add_line_unexe()
+                fcov.add_line_unexe(func_name)
         # iterate each func
         for data_for_func in data_for_file["functions"]:
             func_name = data_for_func["demangled_name"]
@@ -101,17 +104,23 @@ for json_file in json_files:
             else:
                 fcov.add_func_unexe(func_name)
         #print("current file:", source_file_name)
-        #print("line_exe:", fcov.line_num_exe)
-        #print("line_unexe:", fcov.line_num_unexe)
-        #print("func_exe:", fcov.func_set_exe)
-        #print("func_unexe:", fcov.func_set_unexe)
+        #print("line_exe:", len(fcov.line_set_exe))
+        #print("line_unexe:", len(fcov.line_set_unexe))
+        #print("func_exe:", len(fcov.func_set_exe))
+        #print("func_unexe:", len(fcov.func_set_unexe))
+
+# deduplicate
+print("starting deduplication")
+for file_name, fcov in source_files.items():
+    fcov.line_set_unexe = fcov.line_set_unexe - fcov.line_set_exe
+    fcov.func_set_unexe = fcov.func_set_unexe - fcov.func_set_exe
 
 # summary coverage info
 func_num = 0
 line_num = 0
 for file_name, data in source_files.items():
     func_num = func_num + len(data.func_set_exe)
-    line_num = line_num + data.line_num_exe
+    line_num = line_num + len(data.line_set_exe)
 
 print("func num:", func_num)
 print("line num:", line_num)
