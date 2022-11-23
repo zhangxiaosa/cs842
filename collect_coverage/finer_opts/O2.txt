@@ -1,14 +1,9 @@
 -faggressive-loop-optimizations
 -falign-functions
--falign-functions
--falign-jumps
 -falign-jumps
 -falign-labels
--falign-labels
--falign-loops
 -falign-loops
 -fallocation-dce
--fassume-phsa
 -fasynchronous-unwind-tables
 -fauto-inc-dec
 -fbranch-count-reg
@@ -36,7 +31,7 @@
 -fgcse
 -fgcse-lm
 -fguess-branch-probability
--fhandle-exceptions
+-fexceptions
 -fhoist-adjacent-loads
 -fif-conversion
 -fif-conversion2
@@ -72,7 +67,6 @@
 -flra-remat
 -fmath-errno
 -fmove-loop-invariants
--fnothrow-opt
 -fomit-frame-pointer
 -foptimize-sibling-calls
 -foptimize-strlen
@@ -91,7 +85,6 @@
 -freorder-blocks-and-partition
 -freorder-functions
 -frerun-cse-after-loop
--frtti
 -fsched-critical-path-heuristic
 -fsched-dep-count-heuristic
 -fsched-group-heuristic
@@ -118,10 +111,8 @@
 -fstdarg-opt
 -fstore-merging
 -fstrict-aliasing
--fstrict-enums
 -fstrict-volatile-bitfields
 -fthread-jumps
--fno-threadsafe-statics
 -ftoplevel-reorder
 -ftrapping-math
 -ftree-bit-ccp

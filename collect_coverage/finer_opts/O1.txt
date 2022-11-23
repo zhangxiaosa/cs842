@@ -4,7 +4,6 @@
 -falign-labels
 -falign-loops
 -fallocation-dce
--fassume-phsa
 -fasynchronous-unwind-tables
 -fauto-inc-dec
 -fbranch-count-reg
@@ -24,7 +23,7 @@
 -ffunction-cse
 -fgcse-lm
 -fguess-branch-probability
--fhandle-exceptions
+-fexceptions
 -fif-conversion
 -fif-conversion2
 -finline
@@ -46,7 +45,6 @@
 -flifetime-dse=2
 -fmath-errno
 -fmove-loop-invariants
--fnothrow-opt
 -fomit-frame-pointer
 -fpack-struct
 -fpatchable-function-entry=0
@@ -57,7 +55,6 @@
 -frename-registers
 -freorder-blocks
 -freorder-blocks-algorithm=simple
--frtti
 -fsched-critical-path-heuristic
 -fsched-dep-count-heuristic
 -fsched-group-heuristic
@@ -81,9 +78,7 @@
 -fstack-check
 -fstack-reuse=all
 -fstdarg-opt
--fstrict-enums
 -fstrict-volatile-bitfields
--fno-threadsafe-statics
 -ftoplevel-reorder
 -ftrapping-math
 -ftree-bit-ccp

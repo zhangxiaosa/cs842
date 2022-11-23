@@ -4,7 +4,6 @@
 -falign-labels
 -falign-loops
 -fallocation-dce
--fassume-phsa
 -fasynchronous-unwind-tables
 -fauto-inc-dec
 -fdce
@@ -16,7 +15,7 @@
 -ffp-int-builtin-inexact
 -ffunction-cse
 -fgcse-lm
--fhandle-exceptions
+-fexceptions
 -finline-atomics
 -fipa-stack-alignment
 -fira-algorithm=CB
@@ -29,7 +28,6 @@
 -flifetime-dse
 -flifetime-dse=2
 -fmath-errno
--fnothrow-opt
 -fpack-struct
 -fpeephole
 -fplt
@@ -37,7 +35,6 @@
 -fprintf-return-value
 -frename-registers
 -freorder-blocks-algorithm=simple
--frtti
 -fsched-critical-path-heuristic
 -fsched-dep-count-heuristic
 -fsched-group-heuristic
@@ -58,9 +55,7 @@
 -fstack-check
 -fstack-reuse=all
 -fstdarg-opt
--fstrict-enums
 -fstrict-volatile-bitfields
--fno-threadsafe-statics
 -ftrapping-math
 -ftree-cselim
 -ftree-forwprop
