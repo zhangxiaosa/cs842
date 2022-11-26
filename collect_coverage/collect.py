@@ -56,6 +56,7 @@ def collect_coverage_of_options(opt_level):
     for test_case in benchmark:
         #print("starting: ", test_case)
         cmd = "%s %s %s %s" % (gcc_path, opt_level, gcc_flags, test_case)
+        #print("cmd: ", cmd)
         execute(cmd)
     
     # cleanup gcov
@@ -91,15 +92,15 @@ def collect_coverage_of_options(opt_level):
             source_files[source_file_name] = fcov
             # iterate each line
             for data_for_line in data_for_file["lines"]:
-                func_name = data_for_line["line_number"]
+                line_number = data_for_line["line_number"]
                 if (data_for_line["count"] > 0):
-                    fcov.add_line_exe(func_name)
+                    fcov.add_line_exe(line_number)
                 else:
-                    fcov.add_line_unexe(func_name)
+                    fcov.add_line_unexe(line_number)
             # iterate each func
             for data_for_func in data_for_file["functions"]:
                 func_name = data_for_func["demangled_name"]
-                if (data_for_func["blocks_executed"] > 0):
+                if (data_for_func["execution_count"] > 0):
                     fcov.add_func_exe(func_name)
                 else:
                     fcov.add_func_unexe(func_name)
@@ -109,11 +110,11 @@ def collect_coverage_of_options(opt_level):
             #print("func_exe:", len(fcov.func_set_exe))
             #print("func_unexe:", len(fcov.func_set_unexe))
     
-    # deduplicate
-    print("starting deduplication")
-    for file_name, fcov in source_files.items():
-        fcov.line_set_unexe = fcov.line_set_unexe - fcov.line_set_exe
-        fcov.func_set_unexe = fcov.func_set_unexe - fcov.func_set_exe
+#    # deduplicate
+#    print("starting deduplication")
+#    for file_name, fcov in source_files.items():
+#        fcov.line_set_unexe = fcov.line_set_unexe - fcov.line_set_exe
+#        fcov.func_set_unexe = fcov.func_set_unexe - fcov.func_set_exe
     
     # summary coverage info
     func_num_exe = 0
@@ -137,14 +138,34 @@ def collect_coverage_of_options(opt_level):
     
     #print("func num:", func_num)
     #print("line num:", line_num)
-
     return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe
 
+def read_optfile(file_name):
+    with open(file_name, "r") as f:
+        opts = f.readlines()
+    opts = [opt.rstrip() for opt in opts]
+    return opts
 
-opt_level_list = ["-O0", "-O1", "-O2", "-Os", "-O3"]
+if __name__ == '__main__':
 
-for opt_level in opt_level_list:
-    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe = collect_coverage_of_options(opt_level) 
-    print("opt_level: %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d" % (opt_level, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe))
+    opts = read_optfile("finer_opts/O3_disable.txt")
 
-
+    num = 0
+    while(num < len(opts)):
+        current_opts = opts[:num]
+        opts_string = "-O3 " + " ".join(current_opts)
+        line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe = collect_coverage_of_options(opts_string) 
+        if (len(current_opts) == 0):
+            opt_this_time = []
+        else:
+            opt_this_time = current_opts[-1]
+        print("disabled opt num: %d, this time %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d" % (len(current_opts), opt_this_time, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe))
+        num = num + 1   
+    
+#if __name__ == '__main__':
+#
+#    opts = []
+#    opts_string = "-O2"
+#    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe = collect_coverage_of_options(opts_string) 
+#    print("opt num: %d, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d" % (len(opts), line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe))
+    
