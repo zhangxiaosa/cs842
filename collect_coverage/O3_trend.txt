@@ -1,0 +1,930 @@
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 0, this time [], executed line num: 199836, unexecuted line num: 492071, executed func num: 11637, unexecuted func num: 20008, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 1, this time -fno-aggressive-loop-optimizations, executed line num: 199588, unexecuted line num: 492319, executed func num: 11626, unexecuted func num: 20019, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 2, this time -fno-align-functions, executed line num: 199578, unexecuted line num: 492329, executed func num: 11626, unexecuted func num: 20019, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 3, this time -fno-align-jumps, executed line num: 199576, unexecuted line num: 492331, executed func num: 11626, unexecuted func num: 20019, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 4, this time -fno-align-labels, executed line num: 199575, unexecuted line num: 492332, executed func num: 11626, unexecuted func num: 20019, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 5, this time -fno-align-loops, executed line num: 199516, unexecuted line num: 492391, executed func num: 11624, unexecuted func num: 20021, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 6, this time -fno-allocation-dce, executed line num: 199514, unexecuted line num: 492393, executed func num: 11624, unexecuted func num: 20021, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 7, this time -fno-asynchronous-unwind-tables, executed line num: 198911, unexecuted line num: 492996, executed func num: 11572, unexecuted func num: 20073, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 8, this time -fno-auto-inc-dec, executed line num: 198911, unexecuted line num: 492996, executed func num: 11572, unexecuted func num: 20073, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 9, this time -fno-branch-count-reg, executed line num: 198904, unexecuted line num: 493003, executed func num: 11570, unexecuted func num: 20075, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 10, this time -fno-caller-saves, executed line num: 198904, unexecuted line num: 493003, executed func num: 11568, unexecuted func num: 20077, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 11, this time -fno-code-hoisting, executed line num: 198851, unexecuted line num: 493056, executed func num: 11567, unexecuted func num: 20078, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 12, this time -fno-combine-stack-adjustments, executed line num: 198699, unexecuted line num: 493223, executed func num: 11553, unexecuted func num: 20092, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 13, this time -fno-compare-elim, executed line num: 198406, unexecuted line num: 493516, executed func num: 11537, unexecuted func num: 20108, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 14, this time -fno-cprop-registers, executed line num: 198337, unexecuted line num: 493585, executed func num: 11535, unexecuted func num: 20110, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 15, this time -fno-crossjumping, executed line num: 197625, unexecuted line num: 494297, executed func num: 11516, unexecuted func num: 20129, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 16, this time -fno-cse-follow-jumps, executed line num: 197422, unexecuted line num: 494500, executed func num: 11511, unexecuted func num: 20134, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 17, this time -fno-dce, executed line num: 197037, unexecuted line num: 494885, executed func num: 11474, unexecuted func num: 20171, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 18, this time -fno-defer-pop, executed line num: 197036, unexecuted line num: 494886, executed func num: 11474, unexecuted func num: 20171, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 19, this time -fno-delete-null-pointer-checks, executed line num: 196933, unexecuted line num: 494989, executed func num: 11470, unexecuted func num: 20175, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 20, this time -fno-devirtualize, executed line num: 196710, unexecuted line num: 495212, executed func num: 11457, unexecuted func num: 20188, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 21, this time -fno-devirtualize-speculatively, executed line num: 196709, unexecuted line num: 495213, executed func num: 11457, unexecuted func num: 20188, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 22, this time -fno-dse, executed line num: 195565, unexecuted line num: 496357, executed func num: 11398, unexecuted func num: 20247, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 23, this time -fno-early-inlining, executed line num: 195267, unexecuted line num: 496647, executed func num: 11458, unexecuted func num: 20187, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 24, this time -fno-expensive-optimizations, executed line num: 194166, unexecuted line num: 497749, executed func num: 11416, unexecuted func num: 20229, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 25, this time -fno-fast-math, executed line num: 194166, unexecuted line num: 497749, executed func num: 11416, unexecuted func num: 20229, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 26, this time -fno-forward-propagate, executed line num: 193546, unexecuted line num: 498368, executed func num: 11373, unexecuted func num: 20272, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 27, this time -fno-fp-int-builtin-inexact, executed line num: 193545, unexecuted line num: 498369, executed func num: 11373, unexecuted func num: 20272, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 28, this time -fno-function-cse, executed line num: 193547, unexecuted line num: 498367, executed func num: 11373, unexecuted func num: 20272, executed file num: 458, unexecuted file num: 305
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 29, this time -fno-gcse, executed line num: 191790, unexecuted line num: 500125, executed func num: 11247, unexecuted func num: 20398, executed file num: 457, unexecuted file num: 306
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 30, this time -fno-gcse-after-reload, executed line num: 191287, unexecuted line num: 500628, executed func num: 11208, unexecuted func num: 20437, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 31, this time -fno-gcse-lm, executed line num: 191288, unexecuted line num: 500627, executed func num: 11208, unexecuted func num: 20437, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 32, this time -fno-guess-branch-probability, executed line num: 189697, unexecuted line num: 502219, executed func num: 11137, unexecuted func num: 20508, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 33, this time -fno-exceptions, executed line num: 189697, unexecuted line num: 502219, executed func num: 11137, unexecuted func num: 20508, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 34, this time -fno-hoist-adjacent-loads, executed line num: 189656, unexecuted line num: 502260, executed func num: 11136, unexecuted func num: 20509, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 35, this time -fno-if-conversion, executed line num: 188563, unexecuted line num: 503353, executed func num: 11085, unexecuted func num: 20560, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 36, this time -fno-if-conversion2, executed line num: 188084, unexecuted line num: 503832, executed func num: 11065, unexecuted func num: 20580, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 37, this time -fno-indirect-inlining, executed line num: 188083, unexecuted line num: 503833, executed func num: 11065, unexecuted func num: 20580, executed file num: 456, unexecuted file num: 307
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 38, this time -fno-inline, executed line num: 181948, unexecuted line num: 509969, executed func num: 10922, unexecuted func num: 20723, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 39, this time -fno-inline-atomics, executed line num: 181948, unexecuted line num: 509969, executed func num: 10922, unexecuted func num: 20723, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 40, this time -fno-inline-functions, executed line num: 181947, unexecuted line num: 509970, executed func num: 10922, unexecuted func num: 20723, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 41, this time -fno-inline-functions-called-once, executed line num: 181921, unexecuted line num: 509996, executed func num: 10919, unexecuted func num: 20726, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 42, this time -fno-inline-small-functions, executed line num: 181922, unexecuted line num: 509995, executed func num: 10919, unexecuted func num: 20726, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 43, this time -fno-ipa-bit-cp, executed line num: 181839, unexecuted line num: 510078, executed func num: 10918, unexecuted func num: 20727, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 44, this time -fno-ipa-cp, executed line num: 177837, unexecuted line num: 513938, executed func num: 10697, unexecuted func num: 20948, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 45, this time -fno-ipa-cp-clone, executed line num: 177837, unexecuted line num: 513938, executed func num: 10697, unexecuted func num: 20948, executed file num: 454, unexecuted file num: 309
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 46, this time -fno-ipa-icf, executed line num: 176862, unexecuted line num: 514909, executed func num: 10602, unexecuted func num: 21041, executed file num: 450, unexecuted file num: 313
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 47, this time -fno-ipa-icf-functions, executed line num: 176862, unexecuted line num: 514909, executed func num: 10602, unexecuted func num: 21041, executed file num: 450, unexecuted file num: 313
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 48, this time -fno-ipa-icf-variables, executed line num: 176862, unexecuted line num: 514909, executed func num: 10602, unexecuted func num: 21041, executed file num: 450, unexecuted file num: 313
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 49, this time -fno-ipa-profile, executed line num: 176809, unexecuted line num: 514962, executed func num: 10598, unexecuted func num: 21045, executed file num: 450, unexecuted file num: 313
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 50, this time -fno-ipa-pure-const, executed line num: 176170, unexecuted line num: 515600, executed func num: 10556, unexecuted func num: 21087, executed file num: 450, unexecuted file num: 313
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 51, this time -fno-ipa-ra, executed line num: 176316, unexecuted line num: 515453, executed func num: 10563, unexecuted func num: 21080, executed file num: 451, unexecuted file num: 312
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 52, this time -fno-ipa-reference, executed line num: 176017, unexecuted line num: 515753, executed func num: 10537, unexecuted func num: 21106, executed file num: 451, unexecuted file num: 312
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 53, this time -fno-ipa-reference-addressable, executed line num: 176501, unexecuted line num: 515269, executed func num: 10544, unexecuted func num: 21099, executed file num: 451, unexecuted file num: 312
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 54, this time -fno-ipa-sra, executed line num: 174368, unexecuted line num: 517398, executed func num: 10394, unexecuted func num: 21247, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 55, this time -fno-ipa-stack-alignment, executed line num: 174363, unexecuted line num: 517403, executed func num: 10394, unexecuted func num: 21247, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 56, this time -fno-ipa-vrp, executed line num: 174362, unexecuted line num: 517404, executed func num: 10394, unexecuted func num: 21247, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 57, this time -fno-ira-hoist-pressure, executed line num: 174361, unexecuted line num: 517405, executed func num: 10394, unexecuted func num: 21247, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 58, this time -fno-ira-share-save-slots, executed line num: 174361, unexecuted line num: 517405, executed func num: 10394, unexecuted func num: 21247, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 59, this time -fno-ira-share-spill-slots, executed line num: 174314, unexecuted line num: 517452, executed func num: 10393, unexecuted func num: 21248, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 60, this time -fno-isolate-erroneous-paths-dereference, executed line num: 174155, unexecuted line num: 517611, executed func num: 10380, unexecuted func num: 21261, executed file num: 449, unexecuted file num: 314
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 61, this time -fno-ivopts, executed line num: 170405, unexecuted line num: 521361, executed func num: 10150, unexecuted func num: 21491, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 62, this time -fno-jump-tables, executed line num: 170405, unexecuted line num: 521361, executed func num: 10150, unexecuted func num: 21491, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 63, this time -fno-lifetime-dse, executed line num: 170406, unexecuted line num: 521360, executed func num: 10150, unexecuted func num: 21491, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 64, this time -fno-loop-interchange, executed line num: 170066, unexecuted line num: 521700, executed func num: 10129, unexecuted func num: 21512, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 65, this time -fno-loop-unroll-and-jam, executed line num: 169950, unexecuted line num: 521816, executed func num: 10122, unexecuted func num: 21519, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 66, this time -fno-lra-remat, executed line num: 169378, unexecuted line num: 522388, executed func num: 10089, unexecuted func num: 21552, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 67, this time -fno-math-errno, executed line num: 169379, unexecuted line num: 522387, executed func num: 10089, unexecuted func num: 21552, executed file num: 446, unexecuted file num: 317
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 68, this time -fno-move-loop-invariants, executed line num: 168362, unexecuted line num: 523404, executed func num: 10021, unexecuted func num: 21620, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 69, this time -fno-omit-frame-pointer, executed line num: 168599, unexecuted line num: 523167, executed func num: 10038, unexecuted func num: 21603, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 70, this time -fno-optimize-sibling-calls, executed line num: 168064, unexecuted line num: 523702, executed func num: 10009, unexecuted func num: 21632, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 71, this time -fno-optimize-strlen, executed line num: 167197, unexecuted line num: 524569, executed func num: 9970, unexecuted func num: 21671, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 72, this time -fno-pack-struct, executed line num: 167197, unexecuted line num: 524569, executed func num: 9970, unexecuted func num: 21671, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 73, this time -fno-partial-inlining, executed line num: 167178, unexecuted line num: 524588, executed func num: 9968, unexecuted func num: 21673, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 74, this time -fno-peel-loops, executed line num: 167114, unexecuted line num: 524652, executed func num: 9966, unexecuted func num: 21675, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 75, this time -fno-peephole, executed line num: 167114, unexecuted line num: 524652, executed func num: 9966, unexecuted func num: 21675, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 76, this time -fno-peephole2, executed line num: 165494, unexecuted line num: 526273, executed func num: 9891, unexecuted func num: 21750, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 77, this time -fno-plt, executed line num: 165496, unexecuted line num: 526271, executed func num: 9891, unexecuted func num: 21750, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 78, this time -fno-predictive-commoning, executed line num: 164752, unexecuted line num: 527015, executed func num: 9832, unexecuted func num: 21809, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 79, this time -fno-prefetch-loop-arrays, executed line num: 164747, unexecuted line num: 527020, executed func num: 9832, unexecuted func num: 21809, executed file num: 445, unexecuted file num: 318
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 80, this time -fno-printf-return-value, executed line num: 163915, unexecuted line num: 527852, executed func num: 9764, unexecuted func num: 21877, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 81, this time -fno-ree, executed line num: 163396, unexecuted line num: 528371, executed func num: 9735, unexecuted func num: 21906, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 82, this time -fno-rename-registers, executed line num: 163394, unexecuted line num: 528373, executed func num: 9735, unexecuted func num: 21906, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 83, this time -fno-reorder-blocks, executed line num: 163394, unexecuted line num: 528373, executed func num: 9735, unexecuted func num: 21906, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 84, this time -fno-reorder-blocks-and-partition, executed line num: 162548, unexecuted line num: 529219, executed func num: 9695, unexecuted func num: 21946, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 85, this time -fno-reorder-functions, executed line num: 162543, unexecuted line num: 529224, executed func num: 9695, unexecuted func num: 21946, executed file num: 442, unexecuted file num: 321
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 86, this time -fno-rerun-cse-after-loop, executed line num: 162228, unexecuted line num: 529539, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 87, this time -fno-sched-critical-path-heuristic, executed line num: 162228, unexecuted line num: 529539, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 88, this time -fno-sched-dep-count-heuristic, executed line num: 162225, unexecuted line num: 529542, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 89, this time -fno-sched-group-heuristic, executed line num: 162223, unexecuted line num: 529544, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 90, this time -fno-sched-interblock, executed line num: 162223, unexecuted line num: 529544, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 91, this time -fno-sched-last-insn-heuristic, executed line num: 162201, unexecuted line num: 529566, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 92, this time -fno-sched-rank-heuristic, executed line num: 162201, unexecuted line num: 529566, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 93, this time -fno-sched-spec, executed line num: 162200, unexecuted line num: 529567, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 94, this time -fno-sched-spec-insn-heuristic, executed line num: 162200, unexecuted line num: 529567, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 95, this time -fno-sched-stalled-insns-dep, executed line num: 162201, unexecuted line num: 529566, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 96, this time -fno-sched-stalled-insns, executed line num: 162200, unexecuted line num: 529567, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 97, this time -fno-schedule-fusion, executed line num: 162201, unexecuted line num: 529566, executed func num: 9678, unexecuted func num: 21963, executed file num: 441, unexecuted file num: 322
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 98, this time -fno-schedule-insns2, executed line num: 158748, unexecuted line num: 533019, executed func num: 9435, unexecuted func num: 22206, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 99, this time -fno-short-enums, executed line num: 158747, unexecuted line num: 533020, executed func num: 9435, unexecuted func num: 22206, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 100, this time -fno-shrink-wrap, executed line num: 157877, unexecuted line num: 533890, executed func num: 9392, unexecuted func num: 22249, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 101, this time -fno-shrink-wrap-separate, executed line num: 157878, unexecuted line num: 533889, executed func num: 9392, unexecuted func num: 22249, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 102, this time -fno-signed-zeros, executed line num: 157879, unexecuted line num: 533888, executed func num: 9392, unexecuted func num: 22249, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 103, this time -fno-split-ivs-in-unroller, executed line num: 157878, unexecuted line num: 533889, executed func num: 9392, unexecuted func num: 22249, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 104, this time -fno-split-loops, executed line num: 156996, unexecuted line num: 534771, executed func num: 9362, unexecuted func num: 22279, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 105, this time -fno-split-paths, executed line num: 156813, unexecuted line num: 534950, executed func num: 9353, unexecuted func num: 22288, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 106, this time -fno-split-wide-types, executed line num: 156693, unexecuted line num: 535070, executed func num: 9338, unexecuted func num: 22303, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 107, this time -fno-ssa-backprop, executed line num: 156507, unexecuted line num: 535256, executed func num: 9313, unexecuted func num: 22328, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 108, this time -fno-ssa-phiopt, executed line num: 155951, unexecuted line num: 535811, executed func num: 9294, unexecuted func num: 22347, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 109, this time -fno-stack-check, executed line num: 155982, unexecuted line num: 535780, executed func num: 9294, unexecuted func num: 22347, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 110, this time -fno-stdarg-opt, executed line num: 155981, unexecuted line num: 535781, executed func num: 9294, unexecuted func num: 22347, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 111, this time -fno-store-merging, executed line num: 154834, unexecuted line num: 536928, executed func num: 9252, unexecuted func num: 22389, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 112, this time -fno-strict-aliasing, executed line num: 154358, unexecuted line num: 537404, executed func num: 9237, unexecuted func num: 22404, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 113, this time -fno-strict-volatile-bitfields, executed line num: 154359, unexecuted line num: 537403, executed func num: 9237, unexecuted func num: 22404, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 114, this time -fno-thread-jumps, executed line num: 154176, unexecuted line num: 537586, executed func num: 9232, unexecuted func num: 22409, executed file num: 433, unexecuted file num: 330
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 115, this time -fno-toplevel-reorder, executed line num: 159247, unexecuted line num: 532516, executed func num: 9367, unexecuted func num: 22274, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 116, this time -fno-trapping-math, executed line num: 159391, unexecuted line num: 532372, executed func num: 9378, unexecuted func num: 22263, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 117, this time -fno-tree-bit-ccp, executed line num: 159196, unexecuted line num: 532567, executed func num: 9370, unexecuted func num: 22271, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 118, this time -fno-tree-builtin-call-dce, executed line num: 159174, unexecuted line num: 532589, executed func num: 9367, unexecuted func num: 22274, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 119, this time -fno-tree-ccp, executed line num: 158785, unexecuted line num: 532980, executed func num: 9342, unexecuted func num: 22299, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 120, this time -fno-tree-ch, executed line num: 158692, unexecuted line num: 533073, executed func num: 9333, unexecuted func num: 22308, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 121, this time -fno-tree-coalesce-vars, executed line num: 158709, unexecuted line num: 533056, executed func num: 9338, unexecuted func num: 22303, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 122, this time -fno-tree-copy-prop, executed line num: 158587, unexecuted line num: 533178, executed func num: 9326, unexecuted func num: 22315, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 123, this time -fno-tree-cselim, executed line num: 158262, unexecuted line num: 533503, executed func num: 9309, unexecuted func num: 22332, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 124, this time -fno-tree-dce, executed line num: 158688, unexecuted line num: 533076, executed func num: 9321, unexecuted func num: 22320, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 125, this time -fno-tree-dominator-opts, executed line num: 156822, unexecuted line num: 534944, executed func num: 9253, unexecuted func num: 22388, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 126, this time -fno-tree-dse, executed line num: 156418, unexecuted line num: 535348, executed func num: 9228, unexecuted func num: 22413, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 127, this time -fno-tree-forwprop, executed line num: 154923, unexecuted line num: 536843, executed func num: 9190, unexecuted func num: 22451, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 128, this time -fno-tree-fre, executed line num: 155612, unexecuted line num: 536156, executed func num: 9198, unexecuted func num: 22443, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 129, this time -fno-tree-loop-distribute-patterns, executed line num: 154760, unexecuted line num: 537008, executed func num: 9149, unexecuted func num: 22492, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 130, this time -fno-tree-loop-distribution, executed line num: 153918, unexecuted line num: 537849, executed func num: 9075, unexecuted func num: 22566, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 131, this time -fno-tree-loop-if-convert, executed line num: 152160, unexecuted line num: 539607, executed func num: 8986, unexecuted func num: 22655, executed file num: 432, unexecuted file num: 331
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 132, this time -fno-tree-loop-im, executed line num: 148816, unexecuted line num: 542955, executed func num: 8800, unexecuted func num: 22841, executed file num: 431, unexecuted file num: 332
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 133, this time -fno-tree-loop-ivcanon, executed line num: 148174, unexecuted line num: 543597, executed func num: 8777, unexecuted func num: 22864, executed file num: 431, unexecuted file num: 332
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 134, this time -fno-tree-loop-optimize, executed line num: 144491, unexecuted line num: 547280, executed func num: 8526, unexecuted func num: 23115, executed file num: 424, unexecuted file num: 339
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 135, this time -fno-tree-loop-vectorize, executed line num: 144475, unexecuted line num: 547296, executed func num: 8526, unexecuted func num: 23115, executed file num: 424, unexecuted file num: 339
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 136, this time -fno-tree-partial-pre, executed line num: 144366, unexecuted line num: 547405, executed func num: 8524, unexecuted func num: 23117, executed file num: 424, unexecuted file num: 339
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 137, this time -fno-tree-phiprop, executed line num: 144253, unexecuted line num: 547518, executed func num: 8521, unexecuted func num: 23120, executed file num: 424, unexecuted file num: 339
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 138, this time -fno-tree-pre, executed line num: 141736, unexecuted line num: 550035, executed func num: 8369, unexecuted func num: 23272, executed file num: 423, unexecuted file num: 340
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 139, this time -fno-tree-pta, executed line num: 139623, unexecuted line num: 552148, executed func num: 8251, unexecuted func num: 23390, executed file num: 423, unexecuted file num: 340
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 140, this time -fno-tree-reassoc, executed line num: 137943, unexecuted line num: 553820, executed func num: 8179, unexecuted func num: 23462, executed file num: 423, unexecuted file num: 340
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 141, this time -fno-tree-scev-cprop, executed line num: 137943, unexecuted line num: 553820, executed func num: 8179, unexecuted func num: 23462, executed file num: 423, unexecuted file num: 340
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 142, this time -fno-tree-sink, executed line num: 137715, unexecuted line num: 554048, executed func num: 8166, unexecuted func num: 23475, executed file num: 423, unexecuted file num: 340
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 143, this time -fno-tree-slp-vectorize, executed line num: 132165, unexecuted line num: 559597, executed func num: 7859, unexecuted func num: 23782, executed file num: 414, unexecuted file num: 349
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 144, this time -fno-tree-slsr, executed line num: 131517, unexecuted line num: 560245, executed func num: 7820, unexecuted func num: 23821, executed file num: 413, unexecuted file num: 350
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 145, this time -fno-tree-sra, executed line num: 130003, unexecuted line num: 561759, executed func num: 7733, unexecuted func num: 23908, executed file num: 412, unexecuted file num: 351
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 146, this time -fno-tree-switch-conversion, executed line num: 129997, unexecuted line num: 561765, executed func num: 7732, unexecuted func num: 23909, executed file num: 412, unexecuted file num: 351
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 147, this time -fno-tree-tail-merge, executed line num: 129997, unexecuted line num: 561765, executed func num: 7732, unexecuted func num: 23909, executed file num: 412, unexecuted file num: 351
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 148, this time -fno-tree-ter, executed line num: 129555, unexecuted line num: 562207, executed func num: 7707, unexecuted func num: 23934, executed file num: 410, unexecuted file num: 353
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 149, this time -fno-tree-vectorize, executed line num: 129560, unexecuted line num: 562202, executed func num: 7707, unexecuted func num: 23934, executed file num: 410, unexecuted file num: 353
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 150, this time -fno-tree-vrp, executed line num: 121598, unexecuted line num: 570159, executed func num: 7328, unexecuted func num: 24313, executed file num: 395, unexecuted file num: 368
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 151, this time -fno-unswitch-loops, executed line num: 121547, unexecuted line num: 570210, executed func num: 7315, unexecuted func num: 24326, executed file num: 395, unexecuted file num: 368
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 152, this time -fno-var-tracking, executed line num: 121547, unexecuted line num: 570210, executed func num: 7315, unexecuted func num: 24326, executed file num: 395, unexecuted file num: 368
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 153, this time -fno-var-tracking-assignments, executed line num: 121545, unexecuted line num: 570212, executed func num: 7315, unexecuted func num: 24326, executed file num: 395, unexecuted file num: 368
+starting: cleanup gcda in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/gcc/
+starting running benchmark
+starting: cleanup gz in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting: cleanup json in /scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/
+starting coverage info collection
+disabled opt num: 154, this time -fno-version-loops-for-strides, executed line num: 121545, unexecuted line num: 570212, executed func num: 7315, unexecuted func num: 24326, executed file num: 395, unexecuted file num: 368
