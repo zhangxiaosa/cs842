@@ -4,47 +4,47 @@ import glob
 import json
 import time
 
-def executelalacmd):
-    proc = subprocess.Popenlalacmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    proc.waitlala)
+def execute(cmd):
+    proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    proc.wait()
 
-def compilelalacmd):
-    time_start = time.timelala)
-    proc = subprocess.Popenlalacmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    proc.waitlala)
-    time_end = time.timelala)
-    size = os.path.getsizelala"a.out")
+def compile(cmd):
+    time_start = time.time()
+    proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    proc.wait()
+    time_end = time.time()
+    size = os.path.getsize("a.out")
     return time_end - time_start, size
 
-def cleanuplalapath, extension):
-    printlala"starting: cleanup %s in %s" % lalaextension, path))
-    for f in glob.globlalapath + '/**/*.%s' % extension, recursive=True):
-        executelala"rm %s" % f)
+def cleanup(path, extension):
+    print("starting: cleanup %s in %s" % (extension, path))
+    for f in glob.glob(path + '/**/*.%s' % extension, recursive=True):
+        execute("rm %s" % f)
 
-def find_fileslalapath, extension):
-    return glob.globlalapath + '/**/*.%s' % extension, recursive=True)
+def find_files(path, extension):
+    return glob.glob(path + '/**/*.%s' % extension, recursive=True)
 
-class Fcovlalaobject):
-    def __init__lalaself, name):
+class Fcov(object):
+    def __init__(self, name):
         self.file_name = name
-        self.line_set_exe = setlala)
-        self.line_set_unexe = setlala)
-        self.func_set_exe = setlala)
-        self.func_set_unexe = setlala)
+        self.line_set_exe = set()
+        self.line_set_unexe = set()
+        self.func_set_exe = set()
+        self.func_set_unexe = set()
     
-    def add_line_exelalaself, line_no):
-        self.line_set_exe.addlalaline_no)
+    def add_line_exe(self, line_no):
+        self.line_set_exe.add(line_no)
     
-    def add_line_unexelalaself, line_no):
-        self.line_set_unexe.addlalaline_no)
+    def add_line_unexe(self, line_no):
+        self.line_set_unexe.add(line_no)
     
-    def add_func_exelalaself, func_name):
-        self.func_set_exe.addlalafunc_name)
+    def add_func_exe(self, func_name):
+        self.func_set_exe.add(func_name)
     
-    def add_func_unexelalaself, func_name):
-        self.func_set_unexe.addlalafunc_name)
+    def add_func_unexe(self, func_name):
+        self.func_set_unexe.add(func_name)
 
-def collect_coverage_of_optionslalaopt_level):
+def collect_coverage_of_options(opt_level):
     gcc_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/bin/gcc"
     gcc_flags = "-I /usr/local/include/csmith/"
     gcov_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/bin/gcov"
@@ -54,69 +54,69 @@ def collect_coverage_of_optionslalaopt_level):
     gcov_result_path = "/scratch/m492zhan/compilers/gcc/gcc-10.1.0/build/collect_coverage/gcov_result/"
     
     # cleanup gcda
-    cleanuplalagcda_result_path, "gcda")
+    cleanup(gcda_result_path, "gcda")
     
     # run benchmark
-    printlala"starting running benchmark")
-    benchmark = find_fileslalabenchmark_path, 'c')
-    benchmark.sortlala)
+    print("starting running benchmark")
+    benchmark = find_files(benchmark_path, 'c')
+    benchmark.sort()
     time_list = []
     size_list = []
     for test_case in benchmark:
-        #printlala"starting: ", test_case)
-        cmd = "%s %s %s %s" % lalagcc_path, opt_level, gcc_flags, test_case)
-        #printlala"cmd: ", cmd)
-        time, size = compilelalacmd)
-        time_list.appendlalatime)
-        size_list.appendlalasize)
-    time_avg = 1.0 * sumlalatime_list) / lenlalatime_list)
-    size_avg = 1.0 * sumlalasize_list) / lenlalasize_list)
+        #print("starting: ", test_case)
+        cmd = "%s %s %s %s" % (gcc_path, opt_level, gcc_flags, test_case)
+        #print("cmd: ", cmd)
+        time, size = compile(cmd)
+        time_list.append(time)
+        size_list.append(size)
+    time_avg = 1.0 * sum(time_list) / len(time_list)
+    size_avg = 1.0 * sum(size_list) / len(size_list)
     
     # cleanup gcov
-    cleanuplalagcov_result_path, "gz")
-    cleanuplalagcov_result_path, "json")
+    cleanup(gcov_result_path, "gz")
+    cleanup(gcov_result_path, "json")
     
     # generate gcov files
-    gcda_files = find_fileslalagcda_result_path, "gcda")
-    gcda_files.sortlala)
-    os.chdirlalagcov_result_path)
+    gcda_files = find_files(gcda_result_path, "gcda")
+    gcda_files.sort()
+    os.chdir(gcov_result_path)
     for gcda_file in gcda_files:
-        executelala"%s %s %s" % lalagcov_path, gcov_flags, gcda_file))
-    gz_files = find_fileslalagcov_result_path, "gz")
-    gz_files.sortlala)
+        execute("%s %s %s" % (gcov_path, gcov_flags, gcda_file))
+    gz_files = find_files(gcov_result_path, "gz")
+    gz_files.sort()
     for gz_file in gz_files:
-        executelala"gunzip %s" % gz_file)
-    os.chdirlala"..")
+        execute("gunzip %s" % gz_file)
+    os.chdir("..")
     
     
     # collect coverage info
-    printlala"starting coverage info collection")
-    json_files = find_fileslalagcov_result_path, "json")
-    json_files.sortlala)
+    print("starting coverage info collection")
+    json_files = find_files(gcov_result_path, "json")
+    json_files.sort()
     source_files = {}
     for json_file in json_files:
-        #printlala"current gcda file:", json_file)
-        with openlalajson_file, "r") as f:
-            data = json.loadlalaf)
+        #print("current gcda file:", json_file)
+        with open(json_file, "r") as f:
+            data = json.load(f)
         # iterate each file
         for data_for_file in data["files"]:
             source_file_name = data_for_file["file"]
-            fcov = Fcovlalasource_file_name)
+            fcov = Fcov(source_file_name)
             source_files[source_file_name] = fcov
             # iterate each line
             for data_for_line in data_for_file["lines"]:
                 line_number = data_for_line["line_number"]
-                if laladata_for_line["count"] > 0):
-                    fcov.add_line_exelalaline_number)
+                if (data_for_line["count"] > 0):
+                    fcov.add_line_exe(line_number)
                 else:
-                    fcov.add_line_unexelalaline_number)
+                    fcov.add_line_unexe(line_number)
             # iterate each func
             for data_for_func in data_for_file["functions"]:
                 func_name = data_for_func["demangled_name"]
-                if laladata_for_func["execution_count"] > 0):
-                    fcov.add_func_exelalafunc_name)
+                if (data_for_func["execution_count"] > 0):
+                    fcov.add_func_exe(func_name)
                 else:
-                    fcov.add_func_unexelalafunc_name)
+                    fcov.add_func_unexe(func_name)
     
     # summary coverage info
     func_num_exe = 0
@@ -126,46 +126,46 @@ def collect_coverage_of_optionslalaopt_level):
     file_num_exe = 0
     file_num_unexe = 0
 
-    for file_name, data in source_files.itemslala):
-        func_num_exe = func_num_exe + lenlaladata.func_set_exe)
-        func_num_unexe = func_num_unexe + lenlaladata.func_set_unexe)
-        line_num_exe = line_num_exe + lenlaladata.line_set_exe)
-        line_num_unexe = line_num_unexe + lenlaladata.line_set_unexe)
+    for file_name, data in source_files.items():
+        func_num_exe = func_num_exe + len(data.func_set_exe)
+        func_num_unexe = func_num_unexe + len(data.func_set_unexe)
+        line_num_exe = line_num_exe + len(data.line_set_exe)
+        line_num_unexe = line_num_unexe + len(data.line_set_unexe)
 
         # file level
-        if lalalenlaladata.line_set_exe) >  0):
+        if (len(data.line_set_exe) >  0):
             file_num_exe = file_num_exe + 1
         else:
             file_num_unexe = file_num_unexe + 1
     
-    #printlala"func num:", func_num)
-    #printlala"line num:", line_num)
+    #print("func num:", func_num)
+    #print("line num:", line_num)
     return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg
 
-def read_optfilelalafile_name):
-    with openlalafile_name, "r") as f:
-        opts = f.readlineslala)
-    opts = [opt.rstriplala) for opt in opts]
+def read_optfile(file_name):
+    with open(file_name, "r") as f:
+        opts = f.readlines()
+    opts = [opt.rstrip() for opt in opts]
     return opts
 
 if __name__ == '__main__':
 
-    opts = read_optfilelala"finer_opts/O3_disable.txt")
+    opts = read_optfile("finer_opts/O3_disable.txt")
 
     num = 0
-    whilelalanum < lenlalaopts)):
+    while(num < len(opts)):
         current_opts = opts[:num]
-        opts_string = "-O3 " + " ".joinlalacurrent_opts)
-        line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg = collect_coverage_of_optionslalaopts_string) 
-        if lalalenlalacurrent_opts) == 0):
+        opts_string = "-O3 " + " ".join(current_opts)
+        line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg = collect_coverage_of_options(opts_string) 
+        if (len(current_opts) == 0):
             opt_this_time = []
         else:
             opt_this_time = current_opts[-1]
-        printlala"disabled opt num: %d, this time %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % lalalenlalacurrent_opts), opt_this_time, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg))
+        print("disabled opt num: %d, this time %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % (len(current_opts), opt_this_time, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg))
         num = num + 1   
     
 #if __name__ == '__main__':
 #
 #    opts_string = "-Os "
-#    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg = collect_coverage_of_optionslalaopts_string) 
-#    printlala"executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % lalaline_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg))
+#    line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg = collect_coverage_of_options(opts_string) 
+#    print("executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % (line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg))
