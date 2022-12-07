@@ -1,10 +1,9 @@
 //------------------------------------------------------------------------------
-// mutation strategy: replace binary operation
-// inputs: oldOp and newOp
+// mutate strategy: add qualifier: volatile, const, static
+// inputs: used qualifier
 //------------------------------------------------------------------------------
 #include <sstream>
 #include <string>
-#include <string.h>
 #include <iostream>
 #include <fstream>
 #include "clang/AST/AST.h"
@@ -17,578 +16,69 @@
 #include "clang/Tooling/Tooling.h"
 #include "clang/Rewrite/Core/Rewriter.h"
 #include "llvm/Support/raw_ostream.h"
-#include "clang/Lex/Lexer.h"
 using namespace std;
 using namespace clang;
 using namespace clang::driver;
 using namespace clang::tooling;
 
 static llvm::cl::OptionCategory ToolingSampleCategory("Tooling Sample");
+static bool hasMutate = false;
 static int vardeclNumber = 0;
 static int tmpVarDeclNumber = 0;
 static bool hasRandom = false;
 static int randomVar = 0;
 static bool isFirst = true;
 static string mutateType = "";
-static string oldOp = "";
-static string newOp = "";
 // By implementing RecursiveASTVisitor, we can specify which AST nodes
 // we're interested in by overriding relevant methods.
 class MyASTVisitor : public RecursiveASTVisitor<MyASTVisitor> {
 public:
   MyASTVisitor(Rewriter &R) : TheRewriter(R) {}
-  LangOptions lopt;
-  string decl2str(VarDecl *d) {
-    SourceLocation b(d->getBeginLoc()), _e(d->getEndLoc());
-    SourceLocation e(Lexer::getLocForEndOfToken(_e, 0, TheRewriter.getSourceMgr(), lopt));
-    return string(TheRewriter.getSourceMgr().getCharacterData(b),
-        TheRewriter.getSourceMgr().getCharacterData(e)-TheRewriter.getSourceMgr().getCharacterData(b));
+
+  bool VisitVarDecl(VarDecl *d) {
+//    string identifier = mutateType;
+//    string vartype = d->getType().getAsString();
+//    if(isFirst == true && vartype.find(identifier) == string::npos){
+//        vardeclNumber++;
+//    }
+//    // cout<<d->getQualifiedNameAsString()<<endl;
+//    // cout<<d->getType().getAsString()<<endl;
+//    if(isFirst == false && vartype.find(identifier) == string::npos){
+//        if(hasRandom == false){
+//            hasRandom = true;
+//            cout<<"total: "<<vardeclNumber<<endl;
+//            randomVar = (rand() % (vardeclNumber-1+1))+ 1;
+//            cout<<"randdom: "<<randomVar<<endl;
+//        }
+//        tmpVarDeclNumber++;
+//        if(tmpVarDeclNumber == randomVar){
+//            cout<<"mutate here"<<endl;
+//            TheRewriter.InsertText(d->getBeginLoc(),mutateType+" ");
+//        }
+//    }
+    cout << d->getType().getAsString() << endl;   
+    SourceManager &SM = TheRewriter.getSourceMgr(); 
+    cout << d->getSourceRange().printToString(SM) << endl;    
+    return true;
   }
 
-  bool VisitBinaryOperator(BinaryOperator *b) {
-    if(strcmp(oldOp.c_str(),">=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),">")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"==")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"!=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"<")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"<=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"+")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"-")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"*")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"/")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"%")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"&")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"|")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"^")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"<<")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),">>")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"&&")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"||")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"+=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"-=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"*=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"/=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"%=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"&=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"|=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"^=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),"<<=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    } else if(strcmp(oldOp.c_str(),">>=")==0) { //
-        if(oldOp==b->getOpcodeStr()) { //
-            if(isFirst == true){
-                vardeclNumber++;
-            }
-            if(isFirst == false){
-                if(hasRandom == false){
-                    hasRandom = true;
-                    cout<<"total: "<<vardeclNumber<<endl;
-                    randomVar = (rand() % (vardeclNumber-1+1))+ 1;
-                    cout<<"randdom: "<<randomVar<<endl;
-                }
-                tmpVarDeclNumber++;
-                if(tmpVarDeclNumber == randomVar){
-                    cout<<"mutate here"<<endl;
-                    TheRewriter.ReplaceText(b->getOperatorLoc(), b->getOpcodeStr().size(), newOp); 
-                }
-            }
-        }  
-    }
-    
-    /*if (b->isAdditiveOp() || b->isMultiplicativeOp()) { //BO_Mul *, BO_Div ／, BO_Rem %, BO_Add +, BO_Sub -
+  bool VisitStmt(Stmt *s) {
+    // if (isa<DeclStmt>(s)) {
+    //     DeclStmt *ds = cast<DeclStmt>(s);
+    //     cout<<ds->getDeclGroup()<<endl;
+    // }
+    // if (isa<IfStmt>(s)) {
+    //     IfStmt *IfStatement = cast<IfStmt>(s);
+    //     Stmt *Then = IfStatement->getThen();
 
-    } else if (b->isRelationalOp() || b->isEqualityOp()) { //BO_LT <, BO_GT >, BO_LE <=, BO_GE >=, BO_EQ ==, BO_NE !=
-        
-    } else if (b->isBitwiseOp()) { //BO_And &, BO_Xor ^, BO_Or |; BO_Shl <<, BO_Shr >>
+    //     TheRewriter.InsertText(Then->getLocStart(), "// the 'if' part\n", true,
+    //                          true);
 
-    } else if (b->isLogicalOp()) { //BO_LAnd &&, BO_LOr ||
-
-    } // assignment and operation*/
+    //     Stmt *Else = IfStatement->getElse();
+    //     if (Else)
+    //     TheRewriter.InsertText(Else->getLocStart(), "// the 'else' part\n",
+    //                            true, true);
+    // }
     return true;
   }
 
@@ -602,12 +92,24 @@ class MyASTConsumer : public ASTConsumer {
 public:
   MyASTConsumer(Rewriter &R) : Visitor(R) {}
 
+  // Override the method that gets called for each parsed top-level
+  // declaration.
+  /*bool HandleTopLevelDecl(DeclGroupRef DR) override {
+    for (DeclGroupRef::iterator b = DR.begin(), e = DR.end(); b != e; ++b) {
+      // Traverse the declaration using our AST visitor.
+      Visitor.TraverseDecl(*b);
+      isFirst = false;
+      cout<<isFirst<<endl;
+      Visitor.TraverseDecl(*b);
+      //(*b)->dump();
+    }
+    return true;*/
   void HandleTranslationUnit(ASTContext &Context) {
     /* we can use ASTContext to get the TranslationUnitDecl, which is
        a single Decl that collectively represents the entire source file */
     Visitor.TraverseDecl(Context.getTranslationUnitDecl());
-    isFirst = false;
-    Visitor.TraverseDecl(Context.getTranslationUnitDecl());
+    //isFirst = false;
+   // Visitor.TraverseDecl(Context.getTranslationUnitDecl());
   }
 
 private:
@@ -654,10 +156,10 @@ public:
                  << SM.getFileEntryForID(SM.getMainFileID())->getName() << "\n";
 
     // Now emit the rewritten buffer.
-    CopyFile("main.c", "mainori.c");
-    TheRewriter.overwriteChangedFiles();
-    rename("main.c", "mainvar.c");
-    rename("mainori.c", "main.c");
+    //CopyFile("main.c", "mainori.c");
+    //TheRewriter.overwriteChangedFiles();
+    //rename("main.c", "mainvar.c");
+    //rename("mainori.c", "main.c");
   }
 
   std::unique_ptr<ASTConsumer> CreateASTConsumer(CompilerInstance &CI,
@@ -673,11 +175,16 @@ private:
 
 int main(int argc, const char **argv) {
   srand( (unsigned)time( NULL ) );
-  // mutateType = argv[3];
-  oldOp = argv[3];
-  newOp = argv[4];
-  //CommonOptionsParser op(argc, argv, ToolingSampleCategory);
-  //ClangTool Tool(op.getCompilations(), op.getSourcePathList());
+  printf("%d\n", argc);
+  int cnt = argc;
+  for (int i = 0; i < cnt; i++) {
+    printf("argv[%d]: %s\n", i, argv[i]);
+  }
+  mutateType = argv[3];
+  std::cout << mutateType << std::endl;
+  //llvm::Expected<clang::tooling::CommonOptionsParser> op = CommonOptionsParser::create(argc, argv, ToolingSampleCategory);
+  //ClangTool Tool(op->getCompilations(), op->getSourcePathList());
+
   auto ExpectedParser = CommonOptionsParser::create(argc, argv, ToolingSampleCategory);
   if (!ExpectedParser) {
     // Fail gracefully for unsupported options.
@@ -685,8 +192,8 @@ int main(int argc, const char **argv) {
     return 1;
   }
   CommonOptionsParser& OptionsParser = ExpectedParser.get();
-  ClangTool Tool(OptionsParser.getCompilations(), OptionsParser.getSourcePathList());
-
+  ClangTool Tool(OptionsParser.getCompilations(),
+                 OptionsParser.getSourcePathList());
   // ClangTool::run accepts a FrontendActionFactory, which is then used to
   // create new objects implementing the FrontendAction interface. Here we use
   // the helper newFrontendActionFactory to create a default factory that will
