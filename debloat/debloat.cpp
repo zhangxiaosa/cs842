@@ -37,13 +37,29 @@ public:
   }
 
   bool VisitFunctionDecl(FunctionDecl *node) {
-    cout << node->getNameInfo().getAsString() << endl;
     string return_type = node->getReturnType().getAsString();
-    cout << return_type << endl;
-    cout << node->hasBody() << endl;
-    if (node->hasBody() && return_type.compare("void") == 0) {
+    string newstr;
+    if (node->hasBody()) {
+	if (return_type.compare("void") == 0) {
+		newstr = "{ return; }";
+	} 
+	else if(return_type.compare("int") == 0
+		|| return_type.compare("signed int") == 0
+		|| return_type.compare("unsigned int") == 0
+		|| return_type.compare("signed") == 0
+		|| return_type.compare("unsigned") == 0
+		) {
+		newstr = "{ return 0; }";
+	}
+	else if(return_type.compare("float") == 0
+		|| return_type.compare("double") == 0
+		) {
+		newstr = "{ return 0.0; }";
+	}
+	else if(return_type.compare("bool") == 0) {
+		newstr = "{ return false; }";
+	}
 	Stmt* function_body = node->getBody();
-	string newstr = "{ }";
 	TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
     }
     return true;

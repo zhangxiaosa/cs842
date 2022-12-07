@@ -123,8 +123,8 @@ def collect_coverage_of_options(opt_level):
     func_num_unexe = 0
     line_num_exe = 0
     line_num_unexe = 0
-    file_num_exe = 0
-    file_num_unexe = 0
+    file_exe = []
+    file_unexe = []
 
     for file_name, data in source_files.items():
         func_num_exe = func_num_exe + len(data.func_set_exe)
@@ -134,13 +134,13 @@ def collect_coverage_of_options(opt_level):
 
         # file level
         if (len(data.line_set_exe) >  0):
-            file_num_exe = file_num_exe + 1
+            file_exe.append(file_name)
         else:
-            file_num_unexe = file_num_unexe + 1
-    
-    #print("func num:", func_num)
-    #print("line num:", line_num)
-    return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg
+            file_unexe.append(file_name)
+
+    file_exe.sort()
+    file_unexe.sort()
+    return line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_exe, file_unexe, time_avg, size_avg
 
 def read_optfile(file_name):
     with open(file_name, "r") as f:
@@ -156,12 +156,20 @@ if __name__ == '__main__':
     while(num < len(opts)):
         current_opts = opts[:num]
         opts_string = "-O3 " + " ".join(current_opts)
-        line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg = collect_coverage_of_options(opts_string) 
+        line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_exe, file_unexe, time_avg, size_avg = collect_coverage_of_options(opts_string) 
         if (len(current_opts) == 0):
             opt_this_time = []
         else:
             opt_this_time = current_opts[-1]
-        print("disabled opt num: %d, this time %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % (len(current_opts), opt_this_time, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, file_num_exe, file_num_unexe, time_avg, size_avg))
+        print("disabled opt num: %d, this time %s, executed line num: %d, unexecuted line num: %d, executed func num: %d, unexecuted func num: %d, executed file num: %d, unexecuted file num: %d, time: %f, size: %f" % (len(current_opts), opt_this_time, line_num_exe, line_num_unexe, func_num_exe, func_num_unexe, len(file_exe), len(file_unexe), time_avg, size_avg))
+        with open("covered_files/%d_covered.txt" % len(current_opts), "w") as f:
+            for filename in file_exe:
+                f.write(filename)
+                f.write("\n")
+        with open("covered_files/%d_uncovered.txt" % len(current_opts), "w") as f:
+            for filename in file_unexe:
+                f.write(filename)
+                f.write("\n")
         num = num + 1   
     
 #if __name__ == '__main__':
