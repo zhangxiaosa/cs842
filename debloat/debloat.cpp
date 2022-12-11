@@ -40,8 +40,10 @@ public:
     string return_type = node->getReturnType().getAsString();
     string newstr;
     if (node->hasBody()) {
+	Stmt* function_body = node->getBody();
 	if (return_type.compare("void") == 0) {
 		newstr = "{ return; }";
+		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	} 
 	else if(return_type.compare("int") == 0
 		|| return_type.compare("signed int") == 0
@@ -50,17 +52,18 @@ public:
 		|| return_type.compare("unsigned") == 0
 		) {
 		newstr = "{ return 0; }";
+		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
 	else if(return_type.compare("float") == 0
 		|| return_type.compare("double") == 0
 		) {
 		newstr = "{ return 0.0; }";
+		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
 	else if(return_type.compare("bool") == 0) {
 		newstr = "{ return false; }";
+		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
-	Stmt* function_body = node->getBody();
-	TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
     }
     return true;
   }
