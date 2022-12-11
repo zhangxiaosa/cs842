@@ -21,6 +21,9 @@ using namespace clang;
 using namespace clang::driver;
 using namespace clang::tooling;
 
+static string debug = "";
+static string returnTypes = "";
+
 static llvm::cl::OptionCategory ToolingSampleCategory("Tooling Sample");
 // By implementing RecursiveASTVisitor, we can specify which AST nodes
 // we're interested in by overriding relevant methods.
@@ -38,29 +41,35 @@ public:
 
   bool VisitFunctionDecl(FunctionDecl *node) {
     string return_type = node->getReturnType().getAsString();
+    string function_name = node->getNameInfo().getAsString();
     string newstr;
+    if (debug.compare("true") == 0) {
+	cout << "function name: " << function_name << endl;
+    	cout << "return type: " << return_type << endl;
+	cout << "has body: " << node->hasBody() << endl;
+    }
     if (node->hasBody()) {
 	Stmt* function_body = node->getBody();
-	if (return_type.compare("void") == 0) {
+	if (returnTypes.find("void") != string::npos) {
 		newstr = "{ return; }";
 		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	} 
-	else if(return_type.compare("int") == 0
-		|| return_type.compare("signed int") == 0
-		|| return_type.compare("unsigned int") == 0
-		|| return_type.compare("signed") == 0
-		|| return_type.compare("unsigned") == 0
+	else if(returnTypes.find("int") != string::npos
+		|| returnTypes.find("singed int") != string::npos
+		|| returnTypes.find("unsigned int") != string::npos
+		|| returnTypes.find("signed") != string::npos
+		|| returnTypes.find("unsigned") != string::npos
 		) {
 		newstr = "{ return 0; }";
 		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
-	else if(return_type.compare("float") == 0
-		|| return_type.compare("double") == 0
+	else if(returnTypes.find("float") != string::npos
+		|| returnTypes.find("double") != string::npos
 		) {
 		newstr = "{ return 0.0; }";
 		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
-	else if(return_type.compare("bool") == 0) {
+	else if(returnTypes.find("bool") != string::npos) {
 		newstr = "{ return false; }";
 		TheRewriter.ReplaceText(function_body->getSourceRange(), newstr);
 	}
@@ -118,6 +127,9 @@ int main(int argc, const char **argv) {
   for (int i = 0; i < cnt; i++) {
     printf("argv[%d]: %s\n", i, argv[i]);
   }
+
+  debug = argv[3];
+  returnTypes = argv[4];
 
   auto ExpectedParser = CommonOptionsParser::create(argc, argv, ToolingSampleCategory);
   if (!ExpectedParser) {
